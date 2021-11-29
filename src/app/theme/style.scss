@@ -2,23 +2,9 @@
 /*      IMPORTS
 ======================*/
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "./var";
 
 
-:root {
-  --color-body: 240, 242, 245;
-  --color-body-l-3: 255, 255, 255;
-  --color-invert: 8, 8, 8;
-  --color-primary: 4, 128, 218;
-  --color-primary-l-1: 29, 141, 222;
-  --color-primary-d-1: 4, 115, 196;
-  --color-primary-l-2: 54, 153, 225;
-  --color-primary-d-2: 3, 102, 174;
-  --color-primary-text-contrast: #ffffff;
-  --color-secondary: 102, 103, 107;
-  --color-border-dynamic: transparent;
-  --color-dynamic-contrast: rgba(0, 0, 0, 0.75);
-  --color-link-contrast: 3, 90, 153;
-}
 * {
   margin: 0;
   padding: 0;
