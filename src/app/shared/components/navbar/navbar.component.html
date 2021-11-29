@@ -1,1 +1,37 @@
-<p>navbar works!</p>
+<section id="navigation">
+  <div class="container-fluid">
+      <div class="mob-nav">
+          <div class="icon icon-menu-button" id="mobile-toggle"></div>
+          <div class="logo">
+              <img src="img/logo.png" class="mob-logo-image">
+          </div>
+      </div>
+      <div class="nav-flex active" id="nav-area">
+          <img src="img/logo.png" class="logo-image">
+          <form class="search" autocomplete="off">
+              <button type="submit" class="s-submit" value="">
+                  <img src="img/icon-search.svg" class="pt-1 cursor-pointer" />
+              </button>
+              <input type="text" class="s-input" placeholder="Search" name="q" />
+          </form>
+          <ul class="nav-mid">
+              <li>Home</li>
+              <li class="current">My CV</li>
+              <li>Admission</li>
+              <li>Mentoring</li>
+              <li>Job request</li>
+          </ul>
+          <div class="icons d-flex">
+              <div class="icon icon-vip"></div>
+              <div class="icon icon-bell"></div>
+              <div class="icon icon-comment"></div>
+              <div class="icon icon-user"></div>
+          </div>
+      </div>
+      <div class="cover d-none" id="mob-cover">
+          <!-- required --->
+      </div>
+  </div>
+</section>
+<div class="nav-gap"></div> <!-- Required, navbar is absolute or fixed --->
+
