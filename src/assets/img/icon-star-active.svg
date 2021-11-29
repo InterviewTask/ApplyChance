@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22" width="24" height="22">
+	<title>icon-star-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #56e56f } 
+	</style>
+	<path id="Layer" class="shp0" d="M12 0L14.69 8.29L23.41 8.29L16.36 13.42L19.05 21.71L12 16.58L4.95 21.71L7.64 13.42L0.59 8.29L9.31 8.29L12 0Z" />
+</svg>
