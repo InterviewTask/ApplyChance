@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-my-mentoring',
+  selector: 'my-activity-mentoring',
   templateUrl: './my-mentoring.component.html',
   styleUrls: ['./my-mentoring.component.scss']
 })
