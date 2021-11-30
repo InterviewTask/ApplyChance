@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-applied-possions',
+  selector: 'my-activity-applied-possions',
   templateUrl: './applied-possions.component.html',
   styleUrls: ['./applied-possions.component.scss']
 })

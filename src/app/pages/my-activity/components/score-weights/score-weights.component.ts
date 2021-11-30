@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-score-weights',
+  selector: 'my-activity-score-weights',
   templateUrl: './score-weights.component.html',
   styleUrls: ['./score-weights.component.scss']
 })
