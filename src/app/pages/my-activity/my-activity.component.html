@@ -91,62 +91,137 @@
     </div>
     <div class="outer-tabs">
       <div class="outer-tabs-header">
-        <div class="outer-tabs-header-item active" id="first-tab">
+        <div
+          class="outer-tabs-header-item"
+          (click)="setRole(role.APPLICANT)"
+          [ngClass]="activeRole == role.APPLICANT ? 'active' : ''"
+        >
           As an applicant
         </div>
-        <div class="outer-tabs-header-item" id="second-tab">As a mentor</div>
+        <div
+          class="outer-tabs-header-item"
+          (click)="setRole(role.MENTOR)"
+          [ngClass]="activeRole == role.MENTOR ? 'active' : ''"
+        >
+          As a mentor
+        </div>
       </div>
 
       <div class="outer-tabs-box">
         <!-- As an applicant -->
-        <div class="outer-tabs-box-content" id="first-content">
+        <div
+          class="outer-tabs-box-content"
+          [ngClass]="activeRole == role.APPLICANT ? '' : 'd-none'"
+        >
           <div class="inner-tabs">
             <div class="inner-tabs-head">
-              <div class="inner-tabs-head-item active" id="applicant-tab-1">
+              <div
+                class="inner-tabs-head-item"
+                (click)="setStateRole(state.MENTORING_SESSIONS)"
+                [ngClass]="
+                  activeState == state.MENTORING_SESSIONS ? 'active' : ''
+                "
+              >
                 My mentoring sessions
               </div>
-              <div class="inner-tabs-head-item" id="applicant-tab-2">
+              <div
+                class="inner-tabs-head-item"
+                (click)="setStateRole(state.APPLIED_UNIVERSITIES)"
+                [ngClass]="
+                  activeState == state.APPLIED_UNIVERSITIES ? 'active' : ''
+                "
+              >
                 Applied universities
               </div>
-              <div class="inner-tabs-head-item" id="applicant-tab-3">
+              <div
+                (click)="setStateRole(state.APPLIED_POSSIONS)"
+                [ngClass]="
+                  activeState == state.APPLIED_POSSIONS ? 'active' : ''
+                "
+                class="inner-tabs-head-item"
+              >
                 Applied Possions
               </div>
-              <div class="inner-tabs-head-item" id="applicant-tab-4">
+              <div
+                (click)="setStateRole(state.WISH_LIST)"
+                [ngClass]="activeState == state.WISH_LIST ? 'active' : ''"
+                class="inner-tabs-head-item"
+              >
                 My Wish list
               </div>
             </div>
             <div class="inner-tabs-content">
               <!--  My mentoring sessions -->
-              <my-activity-mentoring> </my-activity-mentoring>
+              <my-activity-mentoring
+                [ngClass]="
+                  activeState == state.MENTORING_SESSIONS ? '' : 'd-none'
+                "
+              >
+              </my-activity-mentoring>
+
               <!-- Applied universities -->
-              <my-activity-applied-universities>
+              <my-activity-applied-universities
+                [ngClass]="
+                  activeState == state.APPLIED_UNIVERSITIES ? '' : 'd-none'
+                "
+              >
               </my-activity-applied-universities>
 
               <!-- Applied Possions -->
-              <my-activity-applied-possions> </my-activity-applied-possions>
+              <my-activity-applied-possions
+                [ngClass]="
+                  activeState == state.APPLIED_POSSIONS ? '' : 'd-none'
+                "
+              >
+              </my-activity-applied-possions>
+
               <!-- My Wish list -->
-              <my-activity-my-wish-list> </my-activity-my-wish-list>
+              <my-activity-my-wish-list
+                [ngClass]="activeState == state.WISH_LIST ? '' : 'd-none'"
+              >
+              </my-activity-my-wish-list>
             </div>
           </div>
         </div>
 
         <!-- As a mentor -->
-        <div class="outer-tabs-box-content d-none" id="second-content">
+        <div
+          [ngClass]="activeRole == role.MENTOR ? '' : 'd-none'"
+          class="outer-tabs-box-content"
+        >
           <div class="inner-tabs">
             <div class="inner-tabs-head">
-              <div class="inner-tabs-head-item active" id="mentor-tab-1">
+              <div
+                (click)="setStateRole(state.MENTORING_SESSIONS)"
+                [ngClass]="
+                  activeState == state.MENTORING_SESSIONS ? 'active' : ''
+                "
+                class="inner-tabs-head-item"
+              >
                 My sessions
               </div>
-              <div class="inner-tabs-head-item" id="mentor-tab-2">
+              <div
+                (click)="setStateRole(state.SCORE_WEIGHTS)"
+                [ngClass]="activeState == state.SCORE_WEIGHTS ? 'active' : ''"
+                class="inner-tabs-head-item"
+              >
                 My Score weights
               </div>
             </div>
             <div class="inner-tabs-content">
               <!-- My sessions -->
-              <my-activity-my-sessions> </my-activity-my-sessions>
+              <my-activity-my-sessions
+                [ngClass]="
+                  activeState == state.MENTORING_SESSIONS ? '' : 'd-none'
+                "
+              >
+              </my-activity-my-sessions>
 
               <!-- My Score weights -->
-              <my-activity-score-weights> </my-activity-score-weights>
+              <my-activity-score-weights
+                [ngClass]="activeState == state.SCORE_WEIGHTS ? '' : 'd-none'"
+              >
+              </my-activity-score-weights>
             </div>
           </div>
         </div>
