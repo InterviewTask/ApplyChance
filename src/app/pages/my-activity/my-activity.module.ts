@@ -20,6 +20,7 @@ import { AppliedUnivercityService, TabHandlerService } from './services';
     CommonModule,
     MyActivityRoutingModule,
     ShareModule
+
   ],
   providers:[TabHandlerService,AppliedUnivercityService]
 })
