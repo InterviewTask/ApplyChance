@@ -4,7 +4,7 @@ import { MyActivityComponent } from './my-activity.component';
 import { MyActivityRoutingModule } from './my-activity-routing.module';
 import { ShareModule } from '@apply-chance/share';
 import { AppliedPossionsComponent, AppliedUniversitiesComponent, MyMentoringComponent, MySessionsComponent, MyWishListComponent, ScoreWeightsComponent } from './components';
-import { TabHandlerService } from './services';
+import { AppliedUnivercityService, TabHandlerService } from './services';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,6 @@ import { TabHandlerService } from './services';
     MyActivityRoutingModule,
     ShareModule
   ],
-  providers:[TabHandlerService]
+  providers:[TabHandlerService,AppliedUnivercityService]
 })
 export class MyActivityModule { }

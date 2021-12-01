@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppliedUnivercityService } from '../../services';
 
 @Component({
   selector: 'my-activity-applied-universities',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppliedUniversitiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(appliedUnivercityService:AppliedUnivercityService) { }
 
   ngOnInit() {
   }
