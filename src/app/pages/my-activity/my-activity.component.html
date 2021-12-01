@@ -150,35 +150,25 @@
                 My Wish list
               </div>
             </div>
-            <div class="inner-tabs-content">
+            <div [ngSwitch]="activeState" class="inner-tabs-content">
               <!--  My mentoring sessions -->
               <my-activity-mentoring
-                [ngClass]="
-                  activeState == state.MENTORING_SESSIONS ? '' : 'd-none'
-                "
-              >
+                *ngSwitchCase="state.MENTORING_SESSIONS">
               </my-activity-mentoring>
 
               <!-- Applied universities -->
               <my-activity-applied-universities
-                [ngClass]="
-                  activeState == state.APPLIED_UNIVERSITIES ? '' : 'd-none'
-                "
-              >
+                *ngSwitchCase="state.APPLIED_UNIVERSITIES">
               </my-activity-applied-universities>
 
               <!-- Applied Possions -->
               <my-activity-applied-possions
-                [ngClass]="
-                  activeState == state.APPLIED_POSSIONS ? '' : 'd-none'
-                "
-              >
+                *ngSwitchCase="state.APPLIED_POSSIONS">
               </my-activity-applied-possions>
 
               <!-- My Wish list -->
               <my-activity-my-wish-list
-                [ngClass]="activeState == state.WISH_LIST ? '' : 'd-none'"
-              >
+                *ngSwitchCase="state.WISH_LIST">
               </my-activity-my-wish-list>
             </div>
           </div>
@@ -208,19 +198,15 @@
                 My Score weights
               </div>
             </div>
-            <div class="inner-tabs-content">
+            <div [ngSwitch]="activeState" class="inner-tabs-content">
               <!-- My sessions -->
               <my-activity-my-sessions
-                [ngClass]="
-                  activeState == state.MENTORING_SESSIONS ? '' : 'd-none'
-                "
-              >
+               *ngSwitchCase="state.MENTORING_SESSIONS">
               </my-activity-my-sessions>
 
               <!-- My Score weights -->
               <my-activity-score-weights
-                [ngClass]="activeState == state.SCORE_WEIGHTS ? '' : 'd-none'"
-              >
+               *ngSwitchCase="state.SCORE_WEIGHTS">
               </my-activity-score-weights>
             </div>
           </div>
