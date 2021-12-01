@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import { AppliedUnivercityService } from '../../services';
-import { ScoreWeightsComponent } from '../score-weights/score-weights.component';
+import { AppliedUnivercityDialogComponent } from '../applied-univercity-dialog/applied-univercity-dialog.component';
+
 
 @Component({
   selector: 'my-activity-applied-universities',
@@ -23,8 +24,8 @@ export class AppliedUniversitiesComponent implements OnInit {
   openDialog() {
     console.log("openDialog");
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    this.dialog.open(ScoreWeightsComponent, dialogConfig);
+    dialogConfig.height="80vh"
+    this.dialog.open(AppliedUnivercityDialogComponent, dialogConfig);
 
   }
 
