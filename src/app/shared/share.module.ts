@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components';
+import { DeleteDialogComponent, NavbarComponent } from './components';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -23,11 +23,14 @@ const Mateial=[
   MatNativeDateModule
 ]
 
-
+const components=[
+  NavbarComponent,
+  DeleteDialogComponent,
+]
 
 @NgModule({
   declarations: [
-    NavbarComponent,
+    ...components,
     ...pips,
   ],
   imports: [
@@ -35,7 +38,7 @@ const Mateial=[
     ...Mateial,
   ],
   exports: [
-    NavbarComponent,
+    ...components,
     ...Mateial,
     ...pips
   ]
