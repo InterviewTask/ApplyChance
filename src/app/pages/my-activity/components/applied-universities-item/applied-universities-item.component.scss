@@ -1,0 +1,57 @@
+
+
+ .list-item {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px 30px;
+  border: 1px solid #f2f9ff;
+  justify-content: center;
+  align-items: center;
+}
+ .list-item-title {
+  color: #66676b;
+  position: relative;
+}
+ .list-item .status-accepted {
+  color: #10ca44;
+}
+ .list-item .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+ .list-item .info .dots {
+  width: 6px;
+  height: 22px;
+  background: url("/assets/img/icon-dots.svg") left center no-repeat;
+  background-size: 100% auto;
+}
+
+ .session .session-head .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+ .session .session-head .info .dots {
+  width: 6px;
+  height: 22px;
+  background: url("/assets/img/icon-dots.svg") left center no-repeat;
+  background-size: 70% auto;
+}
+
+ .s-pagination .s-pagination-item a {
+  color: currentColor;
+}
+
+ .s-pagination .s-pagination-item.prev,
+ .s-pagination .s-pagination-item.next {
+  font-weight: 400;
+}

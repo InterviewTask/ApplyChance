@@ -6,7 +6,7 @@ import {  Role, RoleState } from '../models';
 @Injectable()
 export class TabHandlerService {
    _activeRole = new BehaviorSubject<Role>(Role.APPLICANT);
-   _activeState = new BehaviorSubject<RoleState>(RoleState.MENTORING_SESSIONS);
+   _activeState = new BehaviorSubject<RoleState>(RoleState.APPLIED_UNIVERSITIES);
   constructor() {}
 
   set activeRole(role: Role) {

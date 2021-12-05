@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MyActivityComponent } from './my-activity.component';
 import { MyActivityRoutingModule } from './my-activity-routing.module';
 import { ShareModule } from '@apply-chance/share';
-import { AppliedPossionsComponent, AppliedUnivercityDialogComponent, AppliedUniversitiesComponent, MyMentoringComponent, MySessionsComponent, MyWishListComponent, ScoreWeightsComponent } from './components';
+import { AppliedPossionsComponent, AppliedUnivercityDialogComponent, AppliedUniversitiesComponent, AppliedUniversitiesItemComponent, MyMentoringComponent, MySessionsComponent, MyWishListComponent, ScoreWeightsComponent } from './components';
 import { AppliedUnivercityService, TabHandlerService } from './services';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 @NgModule({
@@ -15,7 +15,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MySessionsComponent,
     MyWishListComponent,
     ScoreWeightsComponent,
-    AppliedUnivercityDialogComponent
+    AppliedUnivercityDialogComponent,
+    AppliedUniversitiesItemComponent
   ],
   imports: [
     CommonModule,

@@ -7,14 +7,17 @@ import { ApiService } from './services';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     HttpClientModule
   ],
-  providers:[
+  providers: [
     ApiService,
     INTERCEPTOR_CHAIN_PROVIDER
+  ],
+  exports: [
   ]
 })
 export class CoreModule { }

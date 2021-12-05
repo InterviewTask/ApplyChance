@@ -36,77 +36,14 @@
     </div>
   </div>
 
-  <div class="list-item grid mt-2" sm="cols-12">
-    <div class="list-item-title" sm="col-3">University Name</div>
-    <div sm="col-9">ApplyChance Scholarship 2020</div>
-    <div class="list-item-title" sm="col-3">Major</div>
-    <div sm="col-9">Piano</div>
-    <div class="list-item-title" sm="col-3">Degree</div>
-    <div sm="col-9">P.h.D</div>
-    <div class="list-item-title" sm="col-3">
-      Fund status & Amount
-    </div>
-    <div sm="col-9">No Fund</div>
-    <div class="list-item-title" sm="col-3">
-      Application Status
-    </div>
-    <div class="status-accepted" sm="col-9">
-      <svg
-        width="16"
-        height="12"
-        viewBox="0 0 16 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.46691 9.06217L1.70488 5.43723L0.375 6.71864L5.46691 11.625L15.8125 1.65642L14.4826 0.375L5.46691 9.06217Z"
-          fill="currentColor"
-        />
-      </svg>
-      Accepted
-    </div>
-    <div class="info">
-      <a href="#">
-        <div class="dots"></div>
-      </a>
-    </div>
-  </div>
+<ng-container *ngFor="let item of appliedUniversityList">
+  <applied-universities-item [item]="item">
+  </applied-universities-item>
+</ng-container>
 
-  <div class="list-item grid mt-2" sm="cols-12">
-    <div class="list-item-title" sm="col-3">University Name</div>
-    <div sm="col-9">ApplyChance Scholarship 2020</div>
-    <div class="list-item-title" sm="col-3">Major</div>
-    <div sm="col-9">Piano</div>
-    <div class="list-item-title" sm="col-3">Degree</div>
-    <div sm="col-9">P.h.D</div>
-    <div class="list-item-title" sm="col-3">
-      Fund status & Amount
-    </div>
-    <div sm="col-9">No Fund</div>
-    <div class="list-item-title" sm="col-3">
-      Application Status
-    </div>
-    <div class="status-accepted" sm="col-9">
-      <svg
-        width="16"
-        height="12"
-        viewBox="0 0 16 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.46691 9.06217L1.70488 5.43723L0.375 6.71864L5.46691 11.625L15.8125 1.65642L14.4826 0.375L5.46691 9.06217Z"
-          fill="currentColor"
-        />
-      </svg>
-      Accepted
-    </div>
-    <div class="info">
-      <a href="#">
-        <div class="dots"></div>
-      </a>
-    </div>
-  </div>
+
+
+
   <button (click)="openDialog()" class="button button-add">
     <span class="icon icon-large mr-0">
       <svg

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { IAppliedUniversity } from '../../models';
 
 import { AppliedUnivercityService } from '../../services';
 import { AppliedUnivercityDialogComponent } from '../applied-univercity-dialog/applied-univercity-dialog.component';
@@ -11,7 +12,7 @@ import { AppliedUnivercityDialogComponent } from '../applied-univercity-dialog/a
   styleUrls: ['./applied-universities.component.scss']
 })
 export class AppliedUniversitiesComponent implements OnInit {
-
+  appliedUniversityList:IAppliedUniversity[]=[]
   constructor(
     private appliedUnivercityService: AppliedUnivercityService,
     private dialog: MatDialog
@@ -24,7 +25,7 @@ export class AppliedUniversitiesComponent implements OnInit {
 
   getList(){
     this.appliedUnivercityService.getList().subscribe(res=>{
-      console.log("RES: ",res);
+      this.appliedUniversityList=res;
 
     })
   }
