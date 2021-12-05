@@ -19,8 +19,15 @@ export class AppliedUniversitiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.getList();
   }
 
+  getList(){
+    this.appliedUnivercityService.getList().subscribe(res=>{
+      console.log("RES: ",res);
+
+    })
+  }
   openDialog() {
     console.log("openDialog");
     const dialogConfig = new MatDialogConfig();
