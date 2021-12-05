@@ -7,12 +7,18 @@ import { IAppliedUniversity } from '../../models';
   styleUrls: ['./applied-universities-item.component.scss']
 })
 export class AppliedUniversitiesItemComponent implements OnInit {
-@Input('item')
-item:IAppliedUniversity;
+  @Input('item')
+  item: IAppliedUniversity;
+
+  DropDown: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggelDropDown() {
+    this.DropDown = !this.DropDown;
   }
 
 }

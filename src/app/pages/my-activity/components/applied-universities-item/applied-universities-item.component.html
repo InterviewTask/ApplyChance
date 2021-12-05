@@ -27,9 +27,14 @@
     </svg>
     {{item.status | applicationStatue}}
   </div>
+
   <div class="info">
-    <a href="#">
-      <div class="dots"></div>
+    <a  >
+      <div (click)="toggelDropDown()" class="dots"></div>
     </a>
+    <div class="dropdown-menu" [ngClass]="DropDown?'show-drop-down':'hide-drop-down'">
+      <a (click)="toggelDropDown()" class="dropdown-item" href="#">Edit</a>
+      <a (click)="toggelDropDown()" class="dropdown-item" href="#">Delete</a>
+    </div>
   </div>
 </div>
