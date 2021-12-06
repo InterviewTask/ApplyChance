@@ -1,9 +1,72 @@
+
+ .modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px 34px;
+  overflow: auto;
+}
+ .modal-content .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0 50px 0;
+}
+ .modal-content .head .title {
+  font-weight: 700;
+}
+ .modal-content .head .icon-close {
+  width: 32px;
+  height: 32px;
+  background: url(/assets/img/icon-close.svg) center center no-repeat;
+}
+ .modal-content .bottom-bar {
+  z-index: 10;
+  text-align: right;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+   .modal-content .bottom-bar {
+    margin-top: 50px;
+    padding: 0;
+    position: relative;
+  }
+  .modal-content .bottom-bar .button {
+    padding: 14px 0;
+    width: 100%;
+  }
+  .modal-content .bottom-bar .button-white {
+    margin-bottom: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .modal-content .bottom-bar .button {
+    padding: 14px 0;
+    min-width: 200px;
+    text-align: center;
+    border: 1px solid #0480da;
+  }
+}
+ .modal-content .bottom-bar .button-white {
+  background: #fff;
+  border: 1px solid rgba(102, 103, 107, 0.19);
+  margin-right: 5px;
+}
+@media only screen and (min-width: 992px) {
+  .modal-size-small {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal-size-small {
+    width: 40%;
+  }
+}
+
 .form-control:not(:last-child) {
   margin-bottom: 50px;
 }
 .button-add {
   width: 100%;
-  margin-top: 15px;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   background-color: rgba(4, 128, 218, 0.08);
@@ -19,4 +82,15 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
 }
