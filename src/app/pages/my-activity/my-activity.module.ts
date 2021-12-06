@@ -6,6 +6,8 @@ import { ShareModule } from '@apply-chance/share';
 import { AppliedPossionsComponent, AppliedUnivercityDialogComponent, AppliedUniversitiesComponent, AppliedUniversitiesItemComponent, MyMentoringComponent, MySessionsComponent, MyWishListComponent, ScoreWeightsComponent } from './components';
 import { AppliedUnivercityService, TabHandlerService } from './services';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     MyActivityComponent,
@@ -21,6 +23,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   imports: [
     CommonModule,
     MyActivityRoutingModule,
+    NgSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
     ShareModule
 
   ],
