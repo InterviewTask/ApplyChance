@@ -37,7 +37,7 @@
   </div>
 
 <ng-container *ngFor="let item of appliedUniversityList">
-  <applied-universities-item [item]="item">
+  <applied-universities-item (delete)="deleteItem($event)" (edit)="openDialog(item)" [item]="item">
   </applied-universities-item>
 </ng-container>
 

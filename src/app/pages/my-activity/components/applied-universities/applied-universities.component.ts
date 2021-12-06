@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DeleteDialogComponent } from 'src/app/shared/components';
+import { DialogResult } from 'src/app/shared/enums/dialog-result';
 import { IAppliedUniversity } from '../../models';
 
 import { AppliedUnivercityService } from '../../services';
@@ -12,7 +14,7 @@ import { AppliedUnivercityDialogComponent } from '../applied-univercity-dialog/a
   styleUrls: ['./applied-universities.component.scss']
 })
 export class AppliedUniversitiesComponent implements OnInit {
-  appliedUniversityList:IAppliedUniversity[]=[]
+  appliedUniversityList: IAppliedUniversity[] = []
   constructor(
     private appliedUnivercityService: AppliedUnivercityService,
     private dialog: MatDialog
@@ -23,18 +25,36 @@ export class AppliedUniversitiesComponent implements OnInit {
     this.getList();
   }
 
-  getList(){
-    this.appliedUnivercityService.getList().subscribe(res=>{
-      this.appliedUniversityList=res;
+  getList() {
+    this.appliedUnivercityService.getAppliedUniversityList().subscribe(res => {
+      this.appliedUniversityList = res;
 
     })
   }
-  openDialog() {
-    console.log("openDialog");
+  openDialog(data?:IAppliedUniversity) {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.height="80vh"
-    this.dialog.open(AppliedUnivercityDialogComponent, dialogConfig);
+    dialogConfig.height = "80vh";
+    dialogConfig.width = "50%";
+    dialogConfig.data=data;
+    let dialog=this.dialog.open(AppliedUnivercityDialogComponent, dialogConfig);
+    dialog.afterClosed().subscribe(()=>this.getList())
 
   }
+
+  deleteItem(id: number) {
+    let DialogRef = this.dialog.open(DeleteDialogComponent, {
+			width: '30%'
+		});
+		//---------------------------------------------------------------
+		DialogRef.afterClosed().subscribe((res) => {
+			if (res.Action == DialogResult.OK) {
+        this.appliedUnivercityService.deleteAppliedUniversity(id).subscribe(res=>{
+          this.getList();
+        })
+			}
+		});
+
+   }
+
 
 }

@@ -1,17 +1,13 @@
 <div class="list-item grid mt-2" sm="cols-12">
   <div class="list-item-title" sm="col-3">University Name</div>
-  <div sm="col-9">{{item.university}}</div>
+  <div sm="col-9">{{ item.university }}</div>
   <div class="list-item-title" sm="col-3">Major</div>
-  <div sm="col-9">{{item.major}}</div>
+  <div sm="col-9">{{ item.major }}</div>
   <div class="list-item-title" sm="col-3">Degree</div>
-  <div sm="col-9">{{item.degree}}</div>
-  <div class="list-item-title" sm="col-3">
-    Fund status & Amount
-  </div>
-  <div sm="col-9">{{item.found | fundStatus}}</div>
-  <div class="list-item-title" sm="col-3">
-    Application Status
-  </div>
+  <div sm="col-9">{{ item.degree }}</div>
+  <div class="list-item-title" sm="col-3">Fund status & Amount</div>
+  <div sm="col-9">{{ item.found | fundStatus }}</div>
+  <div class="list-item-title" sm="col-3">Application Status</div>
   <div class="status-accepted" sm="col-9">
     <svg
       width="16"
@@ -25,16 +21,19 @@
         fill="currentColor"
       />
     </svg>
-    {{item.status | applicationStatue}}
+    {{ item.status | applicationStatue }}
   </div>
 
   <div class="info">
-    <a  >
+    <a>
       <div (click)="toggelDropDown()" class="dots"></div>
     </a>
-    <div class="dropdown-menu" [ngClass]="DropDown?'show-drop-down':'hide-drop-down'">
-      <a (click)="toggelDropDown()" class="dropdown-item" href="#">Edit</a>
-      <a (click)="toggelDropDown()" class="dropdown-item" href="#">Delete</a>
+    <div
+      class="dropdown-menu"
+      [ngClass]="DropDown ? 'show-drop-down' : 'hide-drop-down'"
+    >
+      <a (click)="editItem()" class="dropdown-item">Edit</a>
+      <a (click)="deleteItem()" class="dropdown-item">Delete</a>
     </div>
   </div>
 </div>

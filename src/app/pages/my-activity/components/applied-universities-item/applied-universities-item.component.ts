@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IAppliedUniversity } from '../../models';
 
 @Component({
@@ -9,6 +9,10 @@ import { IAppliedUniversity } from '../../models';
 export class AppliedUniversitiesItemComponent implements OnInit {
   @Input('item')
   item: IAppliedUniversity;
+  @Output('delete')
+  delete = new EventEmitter<number>();
+  @Output('edit')
+  edit = new EventEmitter<number>();
 
   DropDown: boolean = false;
 
@@ -19,6 +23,16 @@ export class AppliedUniversitiesItemComponent implements OnInit {
 
   toggelDropDown() {
     this.DropDown = !this.DropDown;
+  }
+
+  deleteItem() {
+    this.toggelDropDown();
+    this.delete.emit(this.item.id)
+  }
+
+  editItem() {
+    this.toggelDropDown();
+    this.edit.emit(this.item.id)
   }
 
 }
