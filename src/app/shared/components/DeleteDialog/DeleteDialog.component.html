@@ -1,22 +1,22 @@
 <div class="card">
 	<div class="card-body">
-		<h5 class="card-title">are you sure ?</h5>
-		<p class="card-text">item delete permenently</p>
+		<h2 class="card-title">are you sure ?</h2>
+		<p class="card-text">item delete permanently </p>
 	</div>
 	<div class="card-footer">
-		<div class="row justify-content-end">
-      <button mat-dialog-close mat-raised-button color="primary">
-				NO
-			</button>
-			<button
-				type="button"
-				(click)="closeDialog()"
-        class="mr-1"
-				mat-raised-button
-				color="warn"
+		<div class="d-flex justify-content-end">
+      <button
+      type="button"
+      (click)="closeDialog()"
+      class="mx-2 mr-1"
+      mat-raised-button
+      color="warn"
 			>
-				YES
-			</button>
+      YES
+    </button>
+    <button class="mx-2" mat-dialog-close mat-raised-button color="primary">
+      NO
+    </button>
 
 		</div>
 	</div>
