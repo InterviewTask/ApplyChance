@@ -11,7 +11,7 @@ import { FundStatusPipe } from './utils/pipes/fund-status.pipe';
 import { MatButtonModule } from '@angular/material/button';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const pips = [
   ApplicationStatuePipe,
@@ -24,7 +24,8 @@ const Mateial = [
   MatInputModule,
   MatButtonModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatProgressBarModule
 ]
 
 const components = [
