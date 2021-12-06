@@ -157,6 +157,11 @@ select {
   font-size: 1rem;
   position: relative;
 }
+.mat-select{
+  border: none !important;
+  padding: 0 !important;
+
+}
 .input {
   width: 100%;
   background-color: transparent;
@@ -544,90 +549,7 @@ input:focus {
   color: #06406a;
   padding: 0 10px;
 }
-.modal-container {
-  left: 0;
-  background: rgba(102, 103, 107, 0.34);
-  backdrop-filter: blur(12px);
-}
-.modal {
-  background: rgba(249, 249, 249, 0.47);
-  border: 3px solid #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-}
-.modal *::-webkit-scrollbar {
-  width: 4px;
-}
-.modal *::-webkit-scrollbar-thumb {
-  background-color: #66676b;
-}
-@media only screen and (min-width: 992px) {
-  .modal {
-    max-height: 80%;
-  }
-}
-.modal .modal-content {
-  background-color: white;
-  border-radius: 8px;
-  padding: 30px 34px;
-  overflow: auto;
-}
-.modal .modal-content .head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 15px 0 50px 0;
-}
-.modal .modal-content .head .title {
-  font-weight: 700;
-}
-.modal .modal-content .head .icon-close {
-  width: 32px;
-  height: 32px;
-  background: url(/assets/img/icon-close.svg) center center no-repeat;
-}
-.modal .modal-content .bottom-bar {
-  z-index: 10;
-  text-align: right;
-  margin-top: 50px;
-}
-@media (max-width: 768px) {
-  .modal .modal-content .bottom-bar {
-    margin-top: 50px;
-    padding: 0;
-    position: relative;
-  }
-  .modal .modal-content .bottom-bar .button {
-    padding: 14px 0;
-    width: 100%;
-  }
-  .modal .modal-content .bottom-bar .button-white {
-    margin-bottom: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .modal .modal-content .bottom-bar .button {
-    padding: 14px 0;
-    min-width: 200px;
-    text-align: center;
-    border: 1px solid #0480da;
-  }
-}
-.modal .modal-content .bottom-bar .button-white {
-  background: #fff;
-  border: 1px solid rgba(102, 103, 107, 0.19);
-  margin-right: 5px;
-}
-@media only screen and (min-width: 992px) {
-  .modal-size-small {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .modal-size-small {
-    width: 40%;
-  }
-}
+
 .form-control .select:before {
   z-index: 2;
   border: none;
@@ -813,4 +735,8 @@ input[type="number"] {
   align-items: center;
   flex-grow: 1;
   font-size: 14px;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 3em;
 }
