@@ -7,10 +7,12 @@ export  class ApplicationStatuePipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
     switch (value) {
-      case 0:
-        return "UNKNOWN";
-        case 1:
-        return "ACCEPTED";
+      case 1:
+      return "ACCEPTED";
+      case 2:
+        return "REJECTED";
+      case 3:
+        return "UNDER REVIEW";
       default:
         return "TYPE NOT SUPPORT"
     }
